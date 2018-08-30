@@ -4,7 +4,7 @@
 parameters:
     database_host: 127.0.0.1
     database_port: ~
-    database_name: api-jwt
+    database_name: symfony-jwt
     database_user: root
     database_password: ~
     # You should uncomment this if you want to use pdo_sqlite
@@ -14,12 +14,10 @@ parameters:
     mailer_host: 127.0.0.1
     mailer_transport: smtp
     mailer_host: smtp.gmail.com
-    mailer_user: lytvynov.anton@gmail.com
+    mailer_user: your.email@gmail.com
     mailer_password: xxxx
     mailer_port: 465
     mailer_encryption: ssl
-    address_to: lytvynov.dev@gmail.com
-
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
