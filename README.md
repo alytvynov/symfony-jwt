@@ -3,7 +3,7 @@ Symfony project with a JWT token protection
 A simple registration system protected with JWT Token.
 
 Check two bundles configs :
-* FUSUserBundle (update db) https://github.com/FriendsOfSymfony/FOSUserBundle
+* FOSUserBundle (update db) https://github.com/FriendsOfSymfony/FOSUserBundle
 * LexikJWTAuthenticationBundle (generate private.pem and public.pem) https://github.com/lexik/LexikJWTAuthenticationBundle
 * NelmioCorsBundle https://github.com/nelmio/NelmioCorsBundle
 
