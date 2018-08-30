@@ -3,7 +3,7 @@ Symfony project with a JWT token protection
 A simple registration system protected with JWT Token.
 
 Check two bundles configs :
-* FUSUserBundle (update db) https://github.com/FriendsOfSymfony/FOSUserBundle
+* FOSUserBundle (update db) https://github.com/FriendsOfSymfony/FOSUserBundle
 * LexikJWTAuthenticationBundle (generate private.pem and public.pem) https://github.com/lexik/LexikJWTAuthenticationBundle
 * NelmioCorsBundle https://github.com/nelmio/NelmioCorsBundle
 
@@ -20,15 +20,6 @@ curl -X POST \
   -F password=password
 ```
 
-To test protection use `/api/test` uri.   
-Without JWT token in header it should be
-```json
-{
-    "code": 401,
-    "message": "JWT Token not found"
-}
-```
-
 To pass protection add the header `Authorization : Bearer <TOKEN>`
 ```bash
 curl -X GET \
@@ -37,4 +28,21 @@ curl -X GET \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -H 'postman-token: 7fba95bb-ec3b-49da-0f6e-996edce9f779'
+```
+
+To test the protection use `/api/test` uri.   
+Without JWT token in header it should be
+```json
+{
+    "code": 401,
+    "message": "JWT Token not found"
+}
+```
+
+With the JWT token authorization => 200 answer
+```json
+{
+    "success": true, 
+    "description": "Success! Protected by JWT token route."
+}
 ```
