@@ -1,5 +1,5 @@
 {
-    "name": "lytvynov/api-jwt",
+    "name": "lytvynov/symfony-jwt",
     "license": "proprietary",
     "type": "project",
     "autoload": {
