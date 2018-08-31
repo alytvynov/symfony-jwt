@@ -4,6 +4,7 @@ namespace UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class TestController extends Controller
 {
@@ -12,6 +13,15 @@ class TestController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('UserBundle:Default:index.html.twig');
+        return new Response(
+            json_encode(
+                [
+                    'success'     => true,
+                    'description' => 'Success! Protected by JWT token route.',
+                ]
+            ),
+            Response::HTTP_OK,
+            ['Content-Type' => 'application/json']
+        );
     }
 }
